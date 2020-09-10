@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import "./styles.css";
 
-export default function App() {
-  const username = "mufidanuha";
+const Profile = (props) => {
+  const {username} = props;
   const [isFollowed, setIsFollowed] = useState(false);
   const [inputAccount, setInputAccount] = useState("");
 
@@ -23,6 +23,12 @@ export default function App() {
       <div>Follower</div>
       <div>Following</div>
       <div>Bio</div>
+
     </>
   );
+}
+
+export default function App() {
+  const username = "mufidanuha";
+  return <Profile username={username}/>
 }
